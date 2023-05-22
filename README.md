@@ -11,6 +11,8 @@ Evaluation is performed against 4 popular benchmarks:
 - 
 It is chosed benchmarks as they test a variety of reasoning and general knowledge across a wide variety of fields in 0-shot and few-shot settings.
 
+# Source data
+https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230523/20230523.csv
 
 #  Summarizing the Performance of All Models
 ![](assets/20230523/totalplot.png)
