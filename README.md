@@ -1,5 +1,6 @@
 # Open LLM Leaderboard Report (Daily Update)
-This repository provides daily visualizations of the performance of open-source Language Models (LLMs), using evaluation metrics from Hugging Face's Open-LLM-Leaderboard. The visualizations in this repository are updated on a daily basis.
+This repository offers daily visualizations that showcase the performance of open-source Large Language Models (LLMs), based on evaluation metrics sourced from Hugging Face's Open-LLM-Leaderboard. The visualizations are refreshed daily to ensure up-to-date information.
+
 ## Source data
 You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230523/20230523.csv) for the underlying data used for visualization.
 
