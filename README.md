@@ -4,7 +4,7 @@ This repository offers daily visualizations that showcase the performance of ope
 ## Source data
 You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230523/20230523.csv) for the underlying data used for visualization.
 
-##  Summarizing the Performance of All Models
+##  Summaray
 ![](assets/20230523/totalplot.png)
 
 
