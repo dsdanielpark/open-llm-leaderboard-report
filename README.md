@@ -36,16 +36,16 @@ It is chosed benchmarks as they test a variety of reasoning and general knowledg
 ![](assets/20230523/Average.png)
 
 ### HellaSwag (10-shot)
-![](assets/20230523/HellaSwag20(10-shot).png)
+![](assets/20230523/HellaSwag (10-shot).png)
 
 ### MMLU (5-shot)
-![](assets/20230523/MMLU20(5-shot).png)
+![](assets/20230523/MMLU (5-shot).png)
 
 ### AI2 Reasoning Challenge (25-shot)
-![](assets/20230523/ARC20(25-shot).png)
+![](assets/20230523/ARC (25-shot).png)
 
 ### TruthfulQA (0-shot)
-![](assets/20230523/TruthfulQA20(0-shot).png)
+![](assets/20230523/TruthfulQA (0-shot).png)
 
 ### Parameters
 ![](assets/20230523/Parameters.png)
