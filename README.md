@@ -24,6 +24,7 @@ It is chosed benchmarks as they test a variety of reasoning and general knowledg
 ![](assets/20230523/top10barplot.png)
 
 # Performance by Metric
+
 ## Average
 ![](assets/20230523/Average.png)
 
