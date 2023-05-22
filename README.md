@@ -25,7 +25,7 @@ https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/202
 # Top 10
 ![](assets/20230523/mainplot_top10.png)
 ![](assets/20230523/top10_with_barplot.png)
-![](assets/20230523/top10barplot.png)
+![](assets/20230523/top10_with_lineplot.png)
 
 # Performance by Metric
 
