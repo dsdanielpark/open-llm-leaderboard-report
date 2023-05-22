@@ -1,5 +1,14 @@
-# Open-LLM-Leaderboard-Report
-## Daily Updated
+# Open LLM Leaderboard Report (Daily Update)
+This repository visualizes the performance of open-source LLM (Language Model) on a daily basis, based on the model evaluation metrics from Hugging Face's Open-LLM-Leaderboard. The visualizations in this repository are updated daily.
+
+## Source data
+You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230523/20230523.csv) for the underlying data used for visualization.
+
+##  Summarizing the Performance of All Models
+![](assets/20230523/totalplot.png)
+
+
+## What is Open-LLM-Leaderboard?
 https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
 
 The [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) tracks, ranks, and evaluates large language models and chatbots. It evaluates models based on benchmarks from the Eleuther AI Language Model Evaluation Harness, covering science questions, commonsense inference, multitask accuracy, and truthfulness in generating answers. 
@@ -14,38 +23,31 @@ Evaluation is performed against 4 popular benchmarks:
 
 It is chosed benchmarks as they test a variety of reasoning and general knowledge across a wide variety of fields in 0-shot and few-shot settings.
 
-# Source data
-https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230523/20230523.csv
-
-#  Summarizing the Performance of All Models
-![](assets/20230523/totalplot.png)
-
-# Top 5
+## Top 5
 ![](assets/20230523/top5plot.png)
 
-# Top 10
-![](assets/20230523/mainplot_top10.png)
+## Top 10
 ![](assets/20230523/top10_with_barplot.png)
 ![](assets/20230523/top10_with_lineplot.png)
 
-# Performance by Metric
+## Performance by Metric
 
-## Average
+### Average
 ![](assets/20230523/Average.png)
 
-## HellaSwag (10-shot)
+### HellaSwag (10-shot)
 ![](assets/20230523/HellaSwag%20(10-shot).png)
 
-## MMLU (5-shot)
+### MMLU (5-shot)
 ![](assets/20230523/MMLU%20(5-shot).png)
 
-## AI2 Reasoning Challenge (25-shot)
+### AI2 Reasoning Challenge (25-shot)
 ![](assets/20230523/ARC%20(25-shot).png)
 
-## TruthfulQA (0-shot)
+### TruthfulQA (0-shot)
 ![](assets/20230523/TruthfulQA%20(0-shot).png)
 
-## Parameters
+### Parameters
 ![](assets/20230523/Parameters.png)
 
-## 
+
