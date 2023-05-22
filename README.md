@@ -1,5 +1,5 @@
 # Open-LLM-Leaderboard-Report
-## 
+## Daily Updated
 https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
 
 The [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) tracks, ranks, and evaluates large language models and chatbots. It evaluates models based on benchmarks from the Eleuther AI Language Model Evaluation Harness, covering science questions, commonsense inference, multitask accuracy, and truthfulness in generating answers. 
