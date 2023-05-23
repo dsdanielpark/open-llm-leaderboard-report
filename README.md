@@ -54,4 +54,6 @@ It is chosed benchmarks as they test a variety of reasoning and general knowledg
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
 ![](assets/20230523/Parameters.png)
 
+# Reference
+[1] https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
 
