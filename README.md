@@ -9,7 +9,7 @@ You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leader
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
 
 ## Ranking
-![](assets/230523/rankingplot.png)
+![](assets/20230523/rankingplot.png)
 
 ## What is Open-LLM-Leaderboard?
 https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
