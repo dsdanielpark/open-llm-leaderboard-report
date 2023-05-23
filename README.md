@@ -6,7 +6,7 @@ You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leader
 
 ##  Summary
 ![](assets/20230523/totalplot.png)
-
+Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
 
 ## What is Open-LLM-Leaderboard?
 https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
@@ -48,6 +48,7 @@ It is chosed benchmarks as they test a variety of reasoning and general knowledg
 ![](assets/20230523/TruthfulQA(0-shot).png)
 
 ### Parameters
+Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
 ![](assets/20230523/Parameters.png)
 
 
