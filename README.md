@@ -1,16 +1,16 @@
 # Open LLM Leaderboard Report (Weekly Update)
-#### Latest update: 20230523
+#### Latest update: 20230526
 This repository offers weekly visualizations that showcase the performance of open-source Large Language Models (LLMs), based on evaluation metrics sourced from Hugging Face's Open-LLM-Leaderboard. The visualizations are refreshed daily to ensure up-to-date information.
 
 ## Source data
-You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230523/20230523.csv) for the underlying data used for visualization.
+You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230526/20230526.csv) for the underlying data used for visualization.
 
 ##  Summary
-![](assets/20230523/totalplot.png)
+![](assets/20230526/totalplot.png)
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
 
 ## Ranking
-![](assets/20230523/rankingplot.png)
+![](assets/20230526/rankingplot.png)
 
 ## What is Open-LLM-Leaderboard?
 https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
@@ -28,32 +28,32 @@ Evaluation is performed against 4 popular benchmarks:
 It is chosed benchmarks as they test a variety of reasoning and general knowledge across a wide variety of fields in 0-shot and few-shot settings.
 
 ## Top 5
-![](assets/20230523/top5plot.png)
+![](assets/20230526/top5plot.png)
 
 ## Top 10
-![](assets/20230523/top10_with_barplot.png)
-![](assets/20230523/top10_with_lineplot.png)
+![](assets/20230526/top10_with_barplot.png)
+![](assets/20230526/top10_with_lineplot.png)
 
 ## Performance by Metric
 
 ### Average
-![](assets/20230523/Average.png)
+![](assets/20230526/Average.png)
 
 ### HellaSwag (10-shot)
-![](assets/20230523/HellaSwag(10-shot).png)
+![](assets/20230526/HellaSwag(10-shot).png)
 
 ### MMLU (5-shot)
-![](assets/20230523/MMLU(5-shot).png)
+![](assets/20230526/MMLU(5-shot).png)
 
 ### AI2 Reasoning Challenge (25-shot)
-![](assets/20230523/ARC(25-shot).png)
+![](assets/20230526/ARC(25-shot).png)
 
 ### TruthfulQA (0-shot)
-![](assets/20230523/TruthfulQA(0-shot).png)
+![](assets/20230526/TruthfulQA(0-shot).png)
 
 ### Parameters
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
-![](assets/20230523/Parameters.png)
+![](assets/20230526/Parameters.png)
 
 # Reference
 [1] https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
