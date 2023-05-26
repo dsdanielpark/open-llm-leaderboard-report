@@ -9,8 +9,8 @@ You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leader
 ![](assets/20230526/totalplot.png)
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
 
-## Ranking
-![](assets/20230526/rankingplot.png)
+## Average Ranking
+![](assets/20230526/rankingplot_Average.png)
 
 ## What is Open-LLM-Leaderboard?
 https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
@@ -38,18 +38,23 @@ It is chosed benchmarks as they test a variety of reasoning and general knowledg
 
 ### Average
 ![](assets/20230526/Average.png)
+![](assets/20230526/rankingplot_Average.png)
 
 ### HellaSwag (10-shot)
 ![](assets/20230526/HellaSwag(10-shot).png)
+![](assets/20230526/rankingplot_HellaSwag(10-shot).png)
 
 ### MMLU (5-shot)
 ![](assets/20230526/MMLU(5-shot).png)
+![](assets/20230526/rankingplot_MMLU(5-shot).png)
 
 ### AI2 Reasoning Challenge (25-shot)
 ![](assets/20230526/ARC(25-shot).png)
+![](assets/20230526/rankingplot_ARC(25-shot).png)
 
 ### TruthfulQA (0-shot)
 ![](assets/20230526/TruthfulQA(0-shot).png)
+![](assets/20230526/rankingplot_TruthfulQA(0-shot).png)
 
 ### Parameters
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
