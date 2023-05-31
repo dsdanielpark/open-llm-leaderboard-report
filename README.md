@@ -9,6 +9,8 @@ You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leader
 Set using config.py
 ```
 git clone https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report
+```
+```
 python main.py
 ```
 
