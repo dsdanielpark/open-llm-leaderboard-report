@@ -12,7 +12,7 @@ def run_steps(step_names):
     os.makedirs(save_path, exist_ok=True)
     formatted_date = datetime.now().strftime("%Y%m%d")
     data_path = f"{CONF.DATA_PATH}/{formatted_date}.json"
-    print(f"Data = {data_path}")
+    print(f"\n* Plots will be made using {data_path}")
     
     with open(data_path, "r") as f:
         data = json.load(f)

@@ -13,7 +13,7 @@ save_path = f'{CONF.SAVE_PATH}/{formatted_date}'
 
 
 
-def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None):
+def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
     sns.set_style("whitegrid")
     fig, ax = plt.subplots(figsize=(30, 20))
     
@@ -57,7 +57,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None):
 
 
 
-def vis_rankingplot(df, target_col):
+def vis_rankingplot(df: pd.DataFrame, target_col: str) -> None:
     df_ranking = df.sort_values(by=target_col, ascending=True) 
 
     sns.set_style("whitegrid")
@@ -78,27 +78,29 @@ def vis_rankingplot(df, target_col):
     text = add_watermark()
     plt.text(0.5, 0.5, text, transform=plt.gcf().transFigure, fontsize=20, ha='center', alpha=0.4)
 
+    plt.tight_layout()  
+
     plt.savefig(f"{save_path}/rankingplot_{target_col}.png", dpi=300)
-    plt.tight_layout()
 
 
 
-def vis_barplot(df, col):
+
+def vis_barplot(df, target_col):
     sns.set_style("whitegrid")
     plt.figure(figsize=(15, 10))
-    bars = plt.bar(df["Model"], df[col], color="gray")
+    bars = plt.bar(df["Model"], df[target_col], color="gray")
     highlight_color = "orange"
     for i in range(6):
         bars[i].set_color(highlight_color)
-    plt.title(f"LLM Model Performance Comparison, Metric:{col}")
+    plt.title(f"LLM Model Performance Comparison, Metric:{target_col}")
     plt.xlabel("Model")
-    plt.ylabel(col)
+    plt.ylabel(target_col)
     plt.xticks(rotation=45, ha="right")
     plt.gca().invert_xaxis()  
     text = add_watermark()
     plt.text(0.5, 0.5, text, transform=plt.gcf().transFigure, fontsize=20, ha='center', alpha=0.4)
     plt.tight_layout()
-    plt.savefig(f"{save_path}/{col}.png", dpi=300)
+    plt.savefig(f"{save_path}/{target_col}.png", dpi=300)
 
 
 
@@ -136,6 +138,7 @@ def vis_top10barplot(df):
     sns.set_style("whitegrid")
     fig, ax = plt.subplots(figsize=(14, 8))
     metrics = ["Average", "ARC (25-shot)", "HellaSwag (10-shot)", "MMLU (5-shot)", "TruthfulQA (0-shot)"]
+    metrics.sort(key=lambda x: top_10_models.loc[0, x], reverse=True)  # 'Average'를 기준으로 내림차순 정렬
     colors = sns.color_palette("pastel", len(metrics))
     for i, metric in enumerate(metrics):
         ax.bar(top_10_models['Model'], top_10_models[metric], color=colors[i], label=metric)
@@ -152,11 +155,45 @@ def vis_top10barplot(df):
     plt.legend()
     plt.subplots_adjust(bottom=0.15)
     
-    text = text = add_watermark()
+    text = add_watermark()
     plt.text(0.5, 0.5, text, transform=plt.gcf().transFigure, fontsize=20, ha='center', alpha=0.4)
     plt.gca().invert_xaxis()  
     plt.tight_layout()
     plt.savefig(f"{save_path}//top10_with_barplot.png", dpi=300)
+
+
+def vis_top10eachbarplot(df):
+    top_10_models = df.nlargest(10, 'Average')
+    sns.set_style("whitegrid")
+    fig, ax = plt.subplots(figsize=(14, 8))
+    metrics = ["Average", "ARC (25-shot)", "HellaSwag (10-shot)", "MMLU (5-shot)", "TruthfulQA (0-shot)"]
+    colors = sns.color_palette("pastel", len(metrics))
+    
+    model_indices = range(len(top_10_models))
+    bar_width = 0.15
+    for i, metric in enumerate(metrics):
+        ax.bar([idx + i * bar_width for idx in model_indices], top_10_models[metric], width=bar_width, color=colors[i], label=metric)
+    
+    parameters_exist = top_10_models[top_10_models['Parameters'] != '']
+    if not parameters_exist.empty:
+        ax.plot(parameters_exist['Model'], parameters_exist['Parameters'], marker='o', markersize=5, color='black', linestyle='--', label='Parameters')
+    
+    for i, model in enumerate(top_10_models['Model']):
+        for j, metric in enumerate(metrics):
+            ax.text(i + j * bar_width, top_10_models.loc[top_10_models['Model'] == model, metric].values[0], str(top_10_models.loc[top_10_models['Model'] == model, metric].values[0]), ha='center', va='bottom')
+    
+    plt.xticks([idx + (len(metrics) - 1) * bar_width / 2 for idx in model_indices], top_10_models['Model'], rotation=45, ha='right', fontsize=13)
+    plt.xlabel('Model', fontsize=12)
+    plt.ylabel('Score', fontsize=12)
+    plt.title('Top 10 Open source LLM Models Performance Comparison', fontsize=14)
+    plt.legend()
+    plt.subplots_adjust(bottom=0.15)
+    
+    text = add_watermark()
+    plt.text(0.5, 0.5, text, transform=plt.gcf().transFigure, fontsize=20, ha='center', alpha=0.4)
+    plt.gca().invert_xaxis()
+    plt.tight_layout()
+    plt.savefig(f"{save_path}//top10_with_eachbarplot.png", dpi=300)
 
 
 
