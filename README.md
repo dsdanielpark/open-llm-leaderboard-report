@@ -5,6 +5,13 @@ This repository offers weekly visualizations that showcase the performance of op
 ## Source data
 You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230531/20230531.csv) for the underlying data used for visualization.
 
+## Run
+Set using config.py
+```
+git clone https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report
+python main.py
+```
+
 ##  Summary
 ![](assets/20230531/totalplot.png)
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
