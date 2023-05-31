@@ -1,19 +1,20 @@
 import os
-from datetime import datetime
 import json
 import config as CONF
+from datetime import datetime
 from src.plotting.vis_plotter import *
 from src.processing.preprocessor import run_preprocess
 
-def run_steps(step_names):
+
+def run_steps(step_names: list) -> None:
     now = datetime.now()
     formatted_date = now.strftime("%Y%m%d")
-    save_path = f'{CONF.SAVE_PATH}/{formatted_date}'
+    save_path = f"{CONF.SAVE_PATH}/{formatted_date}"
     os.makedirs(save_path, exist_ok=True)
     formatted_date = datetime.now().strftime("%Y%m%d")
     data_path = f"{CONF.DATA_PATH}/{formatted_date}.json"
     print(f"\n* Plots will be made using {data_path}")
-    
+
     with open(data_path, "r") as f:
         data = json.load(f)
     df = run_preprocess(data)  # Assuming you have a run_preprocess function
@@ -25,11 +26,25 @@ def run_steps(step_names):
         elif name == "vis_corrheatmap":
             vis_corrheatmap(df)
         elif name == "vis_barplot":
-            metrics = ["Average", "ARC (25-shot)", "HellaSwag (10-shot)", "MMLU (5-shot)", "TruthfulQA (0-shot)", "Parameters"]
+            metrics = [
+                "Average",
+                "ARC (25-shot)",
+                "HellaSwag (10-shot)",
+                "MMLU (5-shot)",
+                "TruthfulQA (0-shot)",
+                "Parameters",
+            ]
             for col in metrics:
                 vis_barplot(df, col)
         elif name == "vis_rankingplot":
-            metrics = ["Average", "ARC (25-shot)", "HellaSwag (10-shot)", "MMLU (5-shot)", "TruthfulQA (0-shot)", "Parameters"]
+            metrics = [
+                "Average",
+                "ARC (25-shot)",
+                "HellaSwag (10-shot)",
+                "MMLU (5-shot)",
+                "TruthfulQA (0-shot)",
+                "Parameters",
+            ]
             for col in metrics:
                 vis_rankingplot(df, col)
         elif name == "vis_top10lineplot":
@@ -44,4 +59,3 @@ def run_steps(step_names):
             vis_totalplot(df, True)
         else:
             print(f"Invalid step name: {name}. Skipping this step.")
-

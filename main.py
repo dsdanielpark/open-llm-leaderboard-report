@@ -2,7 +2,8 @@ import subprocess
 from config import STEPS
 from execute_steps import run_steps
 
-SEPERATE_LINE = "="*55
+SEPERATE_LINE = "=" * 55
+
 
 def main():
     print("Available step names:")
@@ -25,6 +26,7 @@ def main():
     subprocess.run(["python", "execute_steps.py"] + step_names)
 
     run_steps(step_names)
+
 
 if __name__ == "__main__":
     main()
