@@ -117,9 +117,9 @@ def vis_top10lineplot(df):
     for i, model in enumerate(top_10_models['Model']):
         for j, metric in enumerate(metrics):
             ax.text(i, top_10_models.loc[top_10_models['Model'] == model, metric].values[0], str(top_10_models.loc[top_10_models['Model'] == model, metric].values[0]), ha='center', va='bottom')
-    plt.xticks(rotation=45, ha='right', fontsize=15)
-    plt.xlabel('Model', fontsize=12)
-    plt.ylabel('Score', fontsize=12)
+    plt.xticks(rotation=45, ha='right', fontsize=13)
+    plt.xlabel('Model', fontsize=10)
+    plt.ylabel('Score', fontsize=10)
     plt.title('Top 10 Open source LLM Models Performance Comparison', fontsize=14)
     plt.legend()
     plt.subplots_adjust(bottom=0.15)
@@ -145,7 +145,7 @@ def vis_top10barplot(df):
     for i, model in enumerate(top_10_models['Model']):
         for j, metric in enumerate(metrics):
             ax.text(i, top_10_models.loc[top_10_models['Model'] == model, metric].values[0], str(top_10_models.loc[top_10_models['Model'] == model, metric].values[0]), ha='center', va='bottom')
-    plt.xticks(rotation=45, ha='right', fontsize=15)
+    plt.xticks(rotation=45, ha='right', fontsize=13)
     plt.xlabel('Model', fontsize=12)
     plt.ylabel('Score', fontsize=12)
     plt.title('Top 10 Open source LLM Models Performance Comparison', fontsize=14)
