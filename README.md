@@ -14,6 +14,16 @@ git clone https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report
 python main.py
 ```
 
+## Citation
+```bibtex
+@software{Open-LLM-Leaderboard-Report_2023,
+  author = {Daniel Park},
+  title = {{Open-LLM-Leaderboard-Report}},
+  url = {https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report},
+  year = {2023}
+}
+```
+
 ##  Summary
 ![](assets/20230531/totalplot.png)
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
