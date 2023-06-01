@@ -30,13 +30,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
     sns.set_style("whitegrid")
     fig, ax = plt.subplots(figsize=(30, 20))
 
-    metrics = [
-        "Average",
-        "ARC (25-shot)",
-        "HellaSwag (10-shot)",
-        "MMLU (5-shot)",
-        "TruthfulQA (0-shot)",
-    ]
+    metrics = CONF.METRIC_COL
     colors = sns.color_palette("Set2", len(metrics))
 
     # Plot the metrics for each model
@@ -195,13 +189,7 @@ def vis_top10lineplot(df):
     top_10_models = df.nlargest(10, "Average")
     sns.set_style("whitegrid")
     _, ax = plt.subplots(figsize=(14, 8))
-    metrics = [
-        "Average",
-        "ARC (25-shot)",
-        "HellaSwag (10-shot)",
-        "MMLU (5-shot)",
-        "TruthfulQA (0-shot)",
-    ]
+    metrics = CONF.METRIC_COL
     colors = sns.color_palette("pastel", len(metrics))
     for i, metric in enumerate(metrics):
         ax.plot(
@@ -269,13 +257,7 @@ def vis_top10barplot(df):
     top_10_models = df.nlargest(10, "Average")
     sns.set_style("whitegrid")
     _, ax = plt.subplots(figsize=(14, 8))
-    metrics = [
-        "Average",
-        "ARC (25-shot)",
-        "HellaSwag (10-shot)",
-        "MMLU (5-shot)",
-        "TruthfulQA (0-shot)",
-    ]
+    metrics = CONF.METRIC_COL
     metrics.sort(
         key=lambda x: top_10_models.loc[0, x], reverse=True
     )  # Sort by 'Average' in descending order
@@ -341,13 +323,7 @@ def vis_top10eachbarplot(df):
     top_10_models = df.nlargest(10, "Average")
     sns.set_style("whitegrid")
     fig, ax = plt.subplots(figsize=(14, 8))
-    metrics = [
-        "Average",
-        "ARC (25-shot)",
-        "HellaSwag (10-shot)",
-        "MMLU (5-shot)",
-        "TruthfulQA (0-shot)",
-    ]
+    metrics = CONF.METRIC_COL
     colors = sns.color_palette("pastel", len(metrics))
 
     model_indices = range(len(top_10_models))
@@ -424,13 +400,7 @@ def vis_corrheatmap(df):
         None
     """
     heatmap_data = df[
-        [
-            "Average",
-            "ARC (25-shot)",
-            "HellaSwag (10-shot)",
-            "MMLU (5-shot)",
-            "TruthfulQA (0-shot)",
-        ]
+        CONF.METRIC_COL
     ]
     corr_matrix = heatmap_data.corr()
     plt.figure(figsize=(10, 8))
@@ -468,25 +438,11 @@ def vis_top5plot(df):
     """
     df = pd.DataFrame(
         df,
-        columns=[
-            "Model",
-            "Revision",
-            "Average",
-            "ARC (25-shot)",
-            "HellaSwag (10-shot)",
-            "MMLU (5-shot)",
-            "TruthfulQA (0-shot)",
-        ],
+        columns=CONF.WHOLE_COLS,
     )
     performance_cols = df.columns[2:]
     df[performance_cols] = df[performance_cols].round(1)
-    metrics = [
-        "Average",
-        "ARC (25-shot)",
-        "HellaSwag (10-shot)",
-        "MMLU (5-shot)",
-        "TruthfulQA (0-shot)",
-    ]
+    metrics = CONF.METRIC_COL
     colors = sns.color_palette("flare", len(metrics))
     sns.color_palette("flare", 9)
     df = df.set_index("Model")

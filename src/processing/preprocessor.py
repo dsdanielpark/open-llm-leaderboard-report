@@ -1,5 +1,7 @@
 import pandas as pd
 import re
+import config as CONF
+
 
 def run_preprocess(data: list) -> pd.DataFrame:
     """
@@ -13,15 +15,7 @@ def run_preprocess(data: list) -> pd.DataFrame:
     """
     df = pd.DataFrame(
         data,
-        columns=[
-            "Model",
-            "Revision",
-            "Average",
-            "ARC (25-shot)",
-            "HellaSwag (10-shot)",
-            "MMLU (5-shot)",
-            "TruthfulQA (0-shot)",
-        ],
+        columns=CONF.WHOLE_COLS,
     )
     df.drop("Revision", axis=1, inplace=True)
 
