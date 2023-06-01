@@ -16,8 +16,7 @@ python main.py
 
 ## Citation
 ```bibtex
-@software{
-  Open-LLM-Leaderboard-Report_2023,
+@software{Open-LLM-Leaderboard-Report_2023,
   author = {Daniel Park},
   title = {{Open-LLM-Leaderboard-Report}},
   url = {https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report},
