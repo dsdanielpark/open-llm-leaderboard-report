@@ -70,6 +70,18 @@ Parameters: The largest parameter model achieved so far has been converted to 10
 ![](assets/20230531/Parameters.png)
 ![](assets/20230531/rankingplot_Parameters.png)
 
+
+## Citation
+```bibtex
+@software{Open-LLM-Leaderboard-Report_2023,
+  author = {Daniel Park},
+  title = {{Open-LLM-Leaderboard-Report}},
+  url = {https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report},
+  year = {2023}
+}
+```
+
+
 # Reference
 [1] https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
 
