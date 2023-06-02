@@ -139,7 +139,7 @@ def vis_rankingplot(df: pd.DataFrame, target_col: str) -> None:
     plt.savefig(f"{save_path}/rankingplot_{target_col}.png", dpi=300)
 
 
-def vis_barplot(df, target_col):
+def vis_barplot(df: pd.DataFrame, target_col: str) -> None:
     """
     Visualizes the performance comparison of LLM models using a bar plot.
 
@@ -175,7 +175,7 @@ def vis_barplot(df, target_col):
     plt.savefig(f"{save_path}/{target_col}.png", dpi=300)
 
 
-def vis_top10lineplot(df):
+def vis_top10lineplot(df: pd.DataFrame) -> None:
     """
     Visualizes the performance comparison of the top 10 Open source LLM models using a line plot.
 
@@ -243,7 +243,7 @@ def vis_top10lineplot(df):
     plt.savefig(f"{save_path}/top10_with_lineplot.png", dpi=300)
 
 
-def vis_top10barplot(df):
+def vis_top10barplot(df:pd.DataFrame) -> None:
     """
     Visualizes the performance comparison of the top 10 Open source LLM models using a bar plot.
 
@@ -309,7 +309,7 @@ def vis_top10barplot(df):
     plt.savefig(f"{save_path}/top10_with_barplot.png", dpi=300)
 
 
-def vis_top10eachbarplot(df):
+def vis_top10eachbarplot(df: pd.DataFrame) -> None:
     """
     Visualizes the performance comparison of the top 10 Open source LLM models using separate bars for each metric.
 
@@ -388,7 +388,7 @@ def vis_top10eachbarplot(df):
     plt.savefig(f"{save_path}//top10_with_eachbarplot.png", dpi=300)
 
 
-def vis_corrheatmap(df):
+def vis_corrheatmap(df: pd.DataFrame) -> None:
     """
     Visualizes the correlation heatmap of the Open source LLM model performance.
 
@@ -425,7 +425,7 @@ def vis_corrheatmap(df):
     plt.savefig(f"{save_path}/heatmap.png", dpi=300)
 
 
-def vis_top5plot(df):
+def vis_top5plot(df: pd.DataFrame) -> None:
     """
     Visualizes the top 5 Open source LLM model performance.
 
