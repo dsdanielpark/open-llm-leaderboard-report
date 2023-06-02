@@ -74,7 +74,7 @@ Parameters: The largest parameter model achieved so far has been converted to 10
 
 ## Citation
 ```bibtex
-@software{Open-LLM-Leaderboard-Report_2023,
+@software{Open-LLM-Leaderboard-Report-2023,
   author = {Daniel Park},
   title = {{Open-LLM-Leaderboard-Report}},
   url = {https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report},
