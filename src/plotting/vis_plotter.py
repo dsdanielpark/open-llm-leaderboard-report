@@ -1,4 +1,4 @@
-# Copyright (c) 2023 parkminwoo
+# Copyright 2023 parkminwoo
 
 import re
 import numpy as np
