@@ -14,10 +14,7 @@ def run_preprocess(data: list) -> pd.DataFrame:
     Returns:
         pd.DataFrame: Preprocessed data in the form of a DataFrame.
     """
-    df = pd.DataFrame(
-        data,
-        columns=CONF.WHOLE_COLS,
-    )
+    df = pd.DataFrame(data, columns=CONF.WHOLE_COLS,)
     df.drop("Revision", axis=1, inplace=True)
 
     df.iloc[:, 2:] = df.iloc[:, 2:].round(1)

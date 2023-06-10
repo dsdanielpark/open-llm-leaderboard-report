@@ -8,7 +8,7 @@ def data_gen(text: str) -> list:
     Returns:
         list: A 2D list generated from the input text.
     """
-    lines = text.strip().split('\n')
+    lines = text.strip().split("\n")
     result = []
     current_list = []
 
@@ -16,7 +16,7 @@ def data_gen(text: str) -> list:
         line = line.strip()
         if not line:
             continue
-        if line.isnumeric() or line.replace('.', '', 1).isdigit():
+        if line.isnumeric() or line.replace(".", "", 1).isdigit():
             current_list.append(float(line))
         else:
             if current_list:
@@ -26,6 +26,6 @@ def data_gen(text: str) -> list:
     if current_list:
         result.append(current_list)
 
-    data = [result[i] + result[i+1] for i in range(0, len(result), 2)]
+    data = [result[i] + result[i + 1] for i in range(0, len(result), 2)]
 
     return data

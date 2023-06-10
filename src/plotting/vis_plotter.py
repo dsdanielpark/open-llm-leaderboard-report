@@ -243,7 +243,7 @@ def vis_top10lineplot(df: pd.DataFrame) -> None:
     plt.savefig(f"{save_path}/top10_with_lineplot.png", dpi=300)
 
 
-def vis_top10barplot(df:pd.DataFrame) -> None:
+def vis_top10barplot(df: pd.DataFrame) -> None:
     """
     Visualizes the performance comparison of the top 10 Open source LLM models using a bar plot.
 
@@ -398,9 +398,7 @@ def vis_corrheatmap(df: pd.DataFrame) -> None:
     Returns:
         None
     """
-    heatmap_data = df[
-        CONF.METRIC_COL
-    ]
+    heatmap_data = df[CONF.METRIC_COL]
     corr_matrix = heatmap_data.corr()
     plt.figure(figsize=(10, 8))
 
@@ -435,10 +433,7 @@ def vis_top5plot(df: pd.DataFrame) -> None:
     Returns:
         None
     """
-    df = pd.DataFrame(
-        df,
-        columns=CONF.WHOLE_COLS,
-    )
+    df = pd.DataFrame(df, columns=CONF.WHOLE_COLS,)
     performance_cols = df.columns[2:]
     df[performance_cols] = df[performance_cols].round(1)
     metrics = CONF.METRIC_COL
