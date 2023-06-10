@@ -26,7 +26,7 @@ def run_steps(step_names: list) -> None:
     # Set metric col
     metrics = CONF.METRIC_COL
 
-    # Set higher ranking 40
+    # Set max model number to plot
     df = df.iloc[: CONF.N_MODEL]
 
     # Run steps
