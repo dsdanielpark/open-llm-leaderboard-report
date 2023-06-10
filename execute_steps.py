@@ -25,6 +25,9 @@ def run_steps(step_names: list) -> None:
 
     # Set metric col
     metrics = CONF.METRIC_COL
+
+    # Set higher ranking 40
+    df = df.iloc[:CONF.N_MODEL]
     
     # Run steps
     for name in step_names:

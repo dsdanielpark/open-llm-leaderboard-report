@@ -1,4 +1,5 @@
-from datetime import datetime
+
+N_MODEL = 70
 
 DATA_PATH = "data"
 STEPS = [
