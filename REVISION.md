@@ -6,7 +6,6 @@
 - Developing a good LLM, like those in the private sector, requires sufficient resources and an organization capable of handling legal issues.
 - Furthermore, as I initially anticipated, it seems true that the Open LLM leaderboard is tailored towards marketing purposes and aligned with Falcon's release.
 - Related Paper: [Exploring the MIT Mathematics and EECS Curriculum Using Large Language Models](https://arxiv.org/abs/2306.08997)
-
 ![](assets/20230619/totalplot.png)
 
 
