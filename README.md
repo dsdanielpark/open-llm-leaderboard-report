@@ -6,7 +6,7 @@ This repository offers weekly visualizations that showcase the performance of op
 You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20230619/20230619.csv) for the underlying data used for visualization. Raw data is 2d-list formatted [JSON file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/data/20230619.json).
 
 ## Revision with analysis
-[Revision Summary](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/REVISION.md)
+[Revision  (Discussion, Analysis)](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/REVISION.md)
 
 ## Run
 Set using `config.py`
