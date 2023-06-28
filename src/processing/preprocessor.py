@@ -15,8 +15,11 @@ def run_preprocess(data: list) -> pd.DataFrame:
         pd.DataFrame: Preprocessed data in the form of a DataFrame.
     """
     df = pd.DataFrame(data, columns=CONF.WHOLE_COLS,)
-    df.drop("Revision", axis=1, inplace=True)
-
+    try:
+        df.drop("Revision", axis=1, inplace=True)
+    except:
+        pass
+    
     df.iloc[:, 2:] = df.iloc[:, 2:].round(1)
 
     pattern = r"(\d+(?:\.\d+)?)([bBmM])"

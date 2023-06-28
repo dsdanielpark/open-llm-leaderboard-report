@@ -16,18 +16,17 @@ SAVE_PATH = "assets"
 
 WHOLE_COLS = [
     "Model",
-    "Revision",
     "Average",
-    "ARC (25-shot)",
-    "HellaSwag (10-shot)",
-    "MMLU (5-shot)",
-    "TruthfulQA (0-shot)",
+    "ARC(25-shot)",
+    "HellaSwag(10-shot)",
+    "MMLU(5-shot)",
+    "TruthfulQA(0-shot)",
 ]
 
 METRIC_COL = [
     "Average",
-    "ARC (25-shot)",
-    "HellaSwag (10-shot)",
-    "MMLU (5-shot)",
-    "TruthfulQA (0-shot)",
+    "ARC(25-shot)",
+    "HellaSwag(10-shot)",
+    "MMLU(5-shot)",
+    "TruthfulQA(0-shot)",
 ]

@@ -399,14 +399,15 @@ def vis_corrheatmap(df: pd.DataFrame) -> None:
         None
     """
     heatmap_data = df[CONF.METRIC_COL]
+    heatmap_data = pd.DataFrame(heatmap_data)
+    heatmap_data.fillna(0, inplace=True) 
     corr_matrix = heatmap_data.corr()
     plt.figure(figsize=(10, 8))
 
     # Create a mask to hide the upper triangle
-    mask = np.triu(np.ones_like(corr_matrix, dtype=bool))
 
     sns.heatmap(
-        corr_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5, mask=mask
+        corr_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5
     )
     text = add_watermark()
     plt.text(
