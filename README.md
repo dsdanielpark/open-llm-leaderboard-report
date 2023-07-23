@@ -1,4 +1,4 @@
-# Open LLM Leaderboard Report (Weekly Update)
+# Open LLM Leaderboard Report
 #### Latest update: 20230724
 This repository offers weekly visualizations that showcase the performance of open-source Large Language Models (LLMs), based on evaluation metrics sourced from Hugging Face's Open-LLM-Leaderboard. The visualizations are refreshed weekly to ensure up-to-date information.
 
