@@ -37,7 +37,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
             df["Model"],
             df[metric],
             marker="o",
-            markersize=12,
+            markersize=8,
             color=colors[i],
             label=metric,
         )
@@ -49,7 +49,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
             df["Model"],
             df["Parameters"],
             marker="o",
-            markersize=12,
+            markersize=8,
             color="black",
             linestyle="--",
             label="Parameters",
@@ -59,7 +59,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
     for i, model in enumerate(df["Model"]):
         for metric in metrics:
             value = df.loc[df["Model"] == model, metric].values[0]
-            ax.text(i, value, str(value), ha="center", va="bottom")
+            ax.text(i, value, str(value), ha="center", va="bottom", size=13)
 
     # Enhance tick labels based on model names if specified
     if enhance_tick:

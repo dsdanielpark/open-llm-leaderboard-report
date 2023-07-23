@@ -33,8 +33,18 @@ def run_preprocess(data: list) -> pd.DataFrame:
         if re.findall(pattern, model)
         else 0
     )
+
+    # Temporaral hard-coding for 23.07.24.
+    for index, row in df.iterrows():
+        if row["Model"] == "stabilityai/FreeWilly2":
+            df.at[index, "Parameters"] = int(70 * 1_000_000_000)
+        elif row["Model"] == "stabilityai/FreeWilly1-Delta-SafeTensor":
+            df.at[index, "Parameters"] = int(65 * 1_000_000_000)
+            
     if df["Parameters"].max() != 0:
         df["Parameters"] = (df["Parameters"] / df["Parameters"].max()) * 100
+
+    
 
     df["URL"] = df["Model"].apply(
         lambda model: f"https://huggingface.co/{model}" if "/" in model else ""

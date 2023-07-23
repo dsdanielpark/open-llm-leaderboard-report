@@ -1,6 +1,6 @@
 ﻿Model,Average,ARC(25-shot),HellaSwag(10-shot),MMLU(5-shot),TruthfulQA(0-shot),Parameters,URL
-stabilityai/FreeWilly2,71.4,71.1,86.4,68.8,59.4,0.0,https://huggingface.co/stabilityai/FreeWilly2
-stabilityai/FreeWilly1-Delta-SafeTensor,68.7,68.2,85.9,64.8,55.8,0.0,https://huggingface.co/stabilityai/FreeWilly1-Delta-SafeTensor
+stabilityai/FreeWilly2,71.4,71.1,86.4,68.8,59.4,100.0,https://huggingface.co/stabilityai/FreeWilly2
+stabilityai/FreeWilly1-Delta-SafeTensor,68.7,68.2,85.9,64.8,55.8,92.85714285714286,https://huggingface.co/stabilityai/FreeWilly1-Delta-SafeTensor
 meta-llama/Llama-2-70b-hf,67.3,67.3,87.3,69.8,44.9,100.0,https://huggingface.co/meta-llama/Llama-2-70b-hf
 upstage/llama-30b-instruct-2048,67.0,64.9,84.9,61.9,56.3,42.857142857142854,https://huggingface.co/upstage/llama-30b-instruct-2048
 meta-llama/Llama-2-70b-chat-hf,66.8,64.6,85.9,63.9,52.8,100.0,https://huggingface.co/meta-llama/Llama-2-70b-chat-hf
