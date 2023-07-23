@@ -27,7 +27,7 @@ def main():
 
     run_steps(step_names)
 
-    print("Successfully Done.")
+    print("Process Done.")
 
 
 if __name__ == "__main__":
