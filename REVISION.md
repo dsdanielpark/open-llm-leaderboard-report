@@ -1,22 +1,20 @@
 # Open LLM Leaderboard Report Revision
 
 
-#### 2023.07.24
-1. When comparing the models [llama-30b-instruct-2048](https://huggingface.co/upstage/llama-30b-instruct-2048) and [llama-30b-instruct-1024](https://huggingface.co/upstage/llama-30b-instruct), it can be observed that longer sequences, as seen in recent models like long-llama, demonstrate better performance in generative AI. In the context of [long_llama](https://github.com/CStanKonrad/long_llama), the Focused Transformer (FoT) performs better. (https://arxiv.org/abs/2307.03170)
+### 2023.07.24
 
-> Conclusion: Long Sequence Length is better
+#### 1. *Long Sequence Length is better* <br>
+When comparing the models [llama-30b-instruct-2048](https://huggingface.co/upstage/llama-30b-instruct-2048) and [llama-30b-instruct-1024](https://huggingface.co/upstage/llama-30b-instruct), it can be observed that longer sequences, as seen in recent models like long-llama, demonstrate better performance in generative AI. In the context of [long_llama](https://github.com/CStanKonrad/long_llama), the Focused Transformer (FoT) performs better. (https://arxiv.org/abs/2307.03170)
 
-1. Regarding backbone models, llama2 shows better performance, and it is noteworthy that upstage achieved good results with llama1 compared to the top 3 models using llama2. (It is cautiously speculated that upstage might have been retrained with a similar learning strategy based on llama2).
+#### 2. *llama2 performs better than llama1.* <br>
+Regarding backbone models, llama2 shows better performance, and it is noteworthy that upstage achieved good results with llama1 compared to the top 3 models using llama2. (It is cautiously speculated that upstage might have been retrained with a similar learning strategy based on llama2).
 
-> Conclusion: llama2 performs better than llama1.
 
-3. Though not easily definitive, it is roughly estimated that models fine-tuned with llama1 offer better cost-effectiveness with 30B being more efficient in terms of performance compared to 70B. This speculation is based on the fact that stabilityai/FreeWilly2 is a 70B model, while stabilityai/FreeWilly1-Delta-SafeTensor is a 65B model, suggesting that larger parameter size may be advantageous.
+#### 3. *Models with around 30B parameters are cost-effective and those with 65B or more parameters perform better.* <br>
+Though not easily definitive, it is roughly estimated that models fine-tuned with llama1 offer better cost-effectiveness with 30B being more efficient in terms of performance compared to 70B. This speculation is based on the fact that stabilityai/FreeWilly2 is a 70B model, while stabilityai/FreeWilly1-Delta-SafeTensor is a 65B model, suggesting that larger parameter size may be advantageous.
 
-> Conclusion: Models with around 30B parameters are cost-effective and those with 65B or more parameters perform better.
-
-4. Except for meta's llama2, the Orca dataset was used. Hardware acceleration was performed using the deepspeed library in the case of upstage. The paper "Orca: Progressive Learning from Complex Explanation Traces of GPT-4" introduces Orca, a 13-billion parameter model designed to mimic the reasoning process of large foundation models (LFMs) such as GPT-4. Unlike traditional large language models (LLMs), Orca employs a unique training approach that combines progressive learning and teacher assistance to bridge the capacity gap between smaller student models and their larger counterparts. https://arxiv.org/abs/2306.02707
-
-> Conclusion: The usage of Orca is trending.
+#### 4. *The usage of Orca is trending.* <br>
+Except for meta's llama2, the Orca dataset was used. Hardware acceleration was performed using the deepspeed library in the case of upstage. The paper "Orca: Progressive Learning from Complex Explanation Traces of GPT-4" introduces Orca, a 13-billion parameter model designed to mimic the reasoning process of large foundation models (LFMs) such as GPT-4. Unlike traditional large language models (LLMs), Orca employs a unique training approach that combines progressive learning and teacher assistance to bridge the capacity gap between smaller student models and their larger counterparts. https://arxiv.org/abs/2306.02707
 
 <br>
 
