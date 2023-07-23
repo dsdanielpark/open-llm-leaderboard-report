@@ -1,6 +1,19 @@
 # Open LLM Leaderboard Report Revision
 
 
+#### 2023.07.24
+
+- Llama2 from meta ai has been opened, and Stable AI has started its pursuit. Despite many people still harboring suspicions about the reliability of the Open LLM Leaderboard, it remains unchanged without any specific adjustments.
+- Furthermore, there are doubts among many about the various LLM models' ability to catch up with GPT-4. However, there are also analyses pointing in different directions, considering OpenAI's revenue and other factors. As a result, the launch of LLM models seems to be proceeding more cautiously than before, rather than actively launching them as previously done.
+- Research on code and resource efficiency, as well as package updates, are actively ongoing. Various packages like Langchain and Gradio are receiving frequent updates, and attempts to apply them in different applications are being made.
+- Google and OpenAI, along with other companies, are conducting beta releases for service backends. They are efficiently incorporating diverse technologies into generative AI and actively providing free services to analyze user use cases and usage frequency. However, it is uncertain how long these services will remain free.
+- Research on significantly increasing attention in the transformer block and exploring more efficient methods such as gzip for certain tasks compared to LLM has surfaced. In other words, there seems to be a shift in focus from just increasing the model size of LLM to researching how to efficiently handle and process the entire LLM token sequence.
+- It is expected that soon there may be new models that can perform inference without extensive data training, relying solely on well-organized corpus tokens. However, it might not be until the end of this year or later for such models to become available.
+- A package has been released that creates pie charts to visualize the types and frequencies of data on which LLM models are trained, similar to Stanford Alpaca's dataset. While the idea of creating this package was originally considered, the workload with current projects proved too much. Additionally, research on LLM vector databases and other related topics is being actively pursued. Despite starting a project two months ago, you mention not having made substantial progress yet.
+- Resource limitations such as GPUs continue to pose challenges. You express a desire for contact from companies or individuals who can provide GPUs with more than 32GB of memory and Linux servers with over 500GB storage through SSH tunneling. Furthermore, you hope to have a free discussion on today's opinions and related content in the following discussion. You welcome anyone to freely share their thoughts at any time.
+- ![](assets/20230724/totalplot.png)
+
+
 #### 2023.07.14
 - Regarding the open-source LLM, there haven't been significant changes in terms of the graph and numerical aspects. My opinion remains unchanged that the credibility of the open-source LLM leaderboard, as mentioned on June 29, 2023, cannot be trusted. Therefore, I would like to summarize the community news on recent research and developments related to LLM over the past two weeks, rather than focusing on evaluations based on metrics.
 - Recent major updates in the LLM community include the development of easier and faster fine-tuning and inference methods, techniques to minimize memory and resource usage at a low cost, and the creation of packaged solutions for easy componentization.
