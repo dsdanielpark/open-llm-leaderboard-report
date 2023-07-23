@@ -27,6 +27,8 @@ def main():
 
     run_steps(step_names)
 
+    print("Successfully Done.")
+
 
 if __name__ == "__main__":
     main()
