@@ -46,8 +46,8 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
     if not parameters_exist.empty:
         # Plot the parameter data if available
         ax.plot(
-            parameters_exist["Model"],
-            parameters_exist["Parameters"],
+            df["Model"],
+            df["Parameters"],
             marker="o",
             markersize=5,
             color="black",
