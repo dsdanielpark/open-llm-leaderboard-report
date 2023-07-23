@@ -74,7 +74,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
     plt.xlabel("Model", fontsize=24)
     plt.ylabel("Score", fontsize=24)
     plt.title("All Open source LLM Model Performance Comparison", fontsize=30)
-    plt.legend(prop={'size': 20})
+    plt.legend(prop={"size": 20})
     plt.subplots_adjust(bottom=0.15)
 
     # Add watermark text
@@ -399,15 +399,13 @@ def vis_corrheatmap(df: pd.DataFrame) -> None:
     """
     heatmap_data = df[CONF.METRIC_COL]
     heatmap_data = pd.DataFrame(heatmap_data)
-    heatmap_data.fillna(0, inplace=True) 
+    heatmap_data.fillna(0, inplace=True)
     corr_matrix = heatmap_data.corr()
     plt.figure(figsize=(10, 8))
 
     # Create a mask to hide the upper triangle
 
-    sns.heatmap(
-        corr_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5
-    )
+    sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
     text = add_watermark()
     plt.text(
         0.5,

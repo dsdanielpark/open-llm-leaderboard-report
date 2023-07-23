@@ -40,11 +40,9 @@ def run_preprocess(data: list) -> pd.DataFrame:
             df.at[index, "Parameters"] = int(70 * 1_000_000_000)
         elif row["Model"] == "stabilityai/FreeWilly1-Delta-SafeTensor":
             df.at[index, "Parameters"] = int(65 * 1_000_000_000)
-            
+
     if df["Parameters"].max() != 0:
         df["Parameters"] = (df["Parameters"] / df["Parameters"].max()) * 100
-
-    
 
     df["URL"] = df["Model"].apply(
         lambda model: f"https://huggingface.co/{model}" if "/" in model else ""

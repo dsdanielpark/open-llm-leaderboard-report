@@ -30,7 +30,6 @@ def run_steps(step_names: list) -> None:
     df = df.iloc[: CONF.N_MODEL]
     df = df.sort_values(by="Average", ascending=False)
     df = df.drop_duplicates(subset="Model", keep="first")
-    
 
     # Run steps
     for name in step_names:

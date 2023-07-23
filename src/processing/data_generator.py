@@ -43,11 +43,11 @@ def create_2d_list(text: str) -> list:
     Returns:
         list: 2D list with the second element onwards in each sublist converted to float values.
     """
-    lines = text.strip().split('\n')
+    lines = text.strip().split("\n")
     result, sublist = [], []
 
     for i, line in enumerate(lines):
-        if line.strip() == '':
+        if line.strip() == "":
             continue
         if i % 7 == 0 and sublist:
             result.append(sublist)
