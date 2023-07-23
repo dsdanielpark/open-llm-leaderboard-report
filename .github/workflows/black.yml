@@ -23,6 +23,7 @@ jobs:
           cache: 'pip' # caching pip dependencies
       - name: Check formatting (black)
         run: |
+          pip install --upgrade pip
           pip install black
           black . --check
       - name: Check install
