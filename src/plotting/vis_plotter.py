@@ -80,13 +80,13 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
     # Add watermark text
     text = add_watermark()
     plt.text(
+        0.5,
         0.3,
-        0.8,
         text,
         transform=plt.gcf().transFigure,
-        fontsize=20,
+        fontsize=30,
         ha="center",
-        alpha=0.4,
+        alpha=0.3,
     )
 
     ax.invert_xaxis()
