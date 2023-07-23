@@ -19,9 +19,7 @@ def run_preprocess(data: list) -> pd.DataFrame:
         df.drop("Revision", axis=1, inplace=True)
     except:
         pass
-    
     df.iloc[:, 2:] = df.iloc[:, 2:].round(1)
-
     pattern = r"(\d+(?:\.\d+)?)([bBmM])"
     df["Parameters"] = df["Model"].apply(
         lambda model: int(
