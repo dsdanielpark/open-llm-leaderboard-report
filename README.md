@@ -1,3 +1,7 @@
+Development Status :: 5 - Production/Stable <br>
+*Copyright (c) 2023 MinWoo Park*
+
+
 # Open LLM Leaderboard Report
 #### Latest update: 20230724
 This repository offers weekly visualizations that showcase the performance of open-source Large Language Models (LLMs), based on evaluation metrics sourced from Hugging Face's Open-LLM-Leaderboard. The visualizations are refreshed weekly to ensure up-to-date information.
