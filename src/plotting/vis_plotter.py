@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 import config as CONF
 from datetime import datetime
 from src.utils.uitl import add_watermark
@@ -27,7 +26,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
 
     """
     sns.set_style("whitegrid")
-    fig, ax = plt.subplots(figsize=(30, 20))
+    _, ax = plt.subplots(figsize=(30, 20))
 
     metrics = CONF.METRIC_COL
     colors = sns.color_palette("Set2", len(metrics))
@@ -58,7 +57,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
 
     # Add text labels for the metric values
     for i, model in enumerate(df["Model"]):
-        for j, metric in enumerate(metrics):
+        for metric in metrics:
             value = df.loc[df["Model"] == model, metric].values[0]
             ax.text(i, value, str(value), ha="center", va="bottom")
 
