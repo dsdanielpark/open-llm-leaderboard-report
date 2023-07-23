@@ -4,7 +4,7 @@
 #### 2023.07.24
 1. When comparing the models [llama-30b-instruct-2048](https://huggingface.co/upstage/llama-30b-instruct-2048) and [llama-30b-instruct-1024](https://huggingface.co/upstage/llama-30b-instruct), it can be observed that longer sequences, as seen in recent models like long-llama, demonstrate better performance in generative AI. In the context of [long_llama](https://github.com/CStanKonrad/long_llama), the Focused Transformer (FoT) performs better. (https://arxiv.org/abs/2307.03170)
 
-> Long Sequence Length is better
+> Conclusion: Long Sequence Length is better
 
 1. Regarding backbone models, llama2 shows better performance, and it is noteworthy that upstage achieved good results with llama1 compared to the top 3 models using llama2. (It is cautiously speculated that upstage might have been retrained with a similar learning strategy based on llama2).
 
