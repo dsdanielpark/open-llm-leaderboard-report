@@ -37,7 +37,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
             df["Model"],
             df[metric],
             marker="o",
-            markersize=5,
+            markersize=12,
             color=colors[i],
             label=metric,
         )
@@ -49,7 +49,7 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
             df["Model"],
             df["Parameters"],
             marker="o",
-            markersize=5,
+            markersize=12,
             color="black",
             linestyle="--",
             label="Parameters",
@@ -70,18 +70,18 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
             if re.search(r"(stable|Stable)", label):
                 tick.set_color("red")
 
-    plt.xticks(rotation=45, ha="right", fontsize=15)
-    plt.xlabel("Model", fontsize=12)
-    plt.ylabel("Score", fontsize=12)
+    plt.xticks(rotation=45, ha="right", fontsize=20)
+    plt.xlabel("Model", fontsize=24)
+    plt.ylabel("Score", fontsize=24)
     plt.title("All Open source LLM Model Performance Comparison", fontsize=30)
-    plt.legend()
+    plt.legend(prop={'size': 20})
     plt.subplots_adjust(bottom=0.15)
 
     # Add watermark text
     text = add_watermark()
     plt.text(
         0.5,
-        0.3,
+        0.4,
         text,
         transform=plt.gcf().transFigure,
         fontsize=30,
