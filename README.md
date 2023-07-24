@@ -13,7 +13,7 @@ You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leader
 [Revision with Discussion and Analysis](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/REVISION.md)
 
 ## Run
-Set using `config.py`
+Set using [`config.py`](https://github.com/dsdanielpark/open-llm-leaderboard-report/blob/main/config.py)
 ```
 git clone https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report
 cd Open-LLM-Leaderboard-Report
