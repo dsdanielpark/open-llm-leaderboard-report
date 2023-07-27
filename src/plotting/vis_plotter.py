@@ -516,6 +516,7 @@ def vis_radial_chart(df: pd.DataFrame):
 
     # Creating the radial chart
     categories = list(df.columns[1:-1])
+    categories.remove("Parameters")
     N = len(categories)
 
     angles = [n / float(N) * 2 * np.pi for n in range(N)]
