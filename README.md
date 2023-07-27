@@ -21,8 +21,11 @@ cd Open-LLM-Leaderboard-Report
 ```
 python main.py
 ```
+## Top 5 Summary
+![](assets/20230724/radial_chart.png)
 
-##  Summary
+
+##  Total Summary
 ![](assets/20230724/totalplot.png)
 Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
 
