@@ -53,5 +53,7 @@ def run_steps(step_names: list) -> None:
             vis_totalplot(df)
         elif name == "vis_totalplot_enhanced":
             vis_totalplot(df, True)
+        elif name == "vis_radial_chart":
+            vis_radial_chart(df)
         else:
             print(f"Invalid step name: {name}. Skipping this step.")

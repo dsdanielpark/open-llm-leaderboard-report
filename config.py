@@ -11,6 +11,7 @@ STEPS = [
     "vis_top5plot",
     "vis_totalplot_all",
     "vis_totalplot_enhanced",
+    "vis_radial_chart",
 ]
 SAVE_PATH = "assets"
 

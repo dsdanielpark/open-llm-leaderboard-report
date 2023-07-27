@@ -484,3 +484,85 @@ def vis_top5plot(df: pd.DataFrame) -> None:
     plt.gca().invert_xaxis()
     plt.tight_layout()
     plt.savefig(f"{save_path}/top5plot.png", dpi=300)
+
+
+
+def vis_radial_chart(df: pd.DataFrame):
+    """
+    Create a radial chart (spider or radar chart) based on the provided DataFrame.
+
+    Parameters:
+        df (pd.DataFrame): The input DataFrame containing model names and performance scores for each category.
+
+    Returns:
+        None: The function plots the radial chart and saves it as "out.png".
+
+    Note:
+        The function assumes that the input DataFrame contains model names in the 'Model' column, and performance scores
+        for each category ('Average', 'ARC(25-shot)', 'HellaSwag(10-shot)', 'MMLU(5-shot)', 'TruthfulQA(0-shot)')
+        in the corresponding columns. The scores are scaled to range from 1 (minimum) to 5 (maximum) for visual clarity.
+
+        The function will save the radial chart as "out.png" with a resolution of 300dpi.
+    """
+
+    # Scaling scores to range from 1 to 5
+    for col in df.columns[1:-1]:
+        max_val = df[col].max()
+        min_val = df[col].min()
+        df[col] = ((df[col] - min_val) / (max_val - min_val) * 4) + 1
+
+    # Extracting the top 5 models based on the 'Average' score
+    top_5_models = df.nlargest(5, 'Average')
+
+    # Creating the radial chart
+    categories = list(df.columns[1:-1])
+    N = len(categories)
+
+    angles = [n / float(N) * 2 * np.pi for n in range(N)]
+    angles += angles[:1]
+
+    _, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True), dpi=300)
+
+    # Setting colors for the top 5 models
+    cmap = plt.get_cmap('Set2')
+    colors = cmap(np.linspace(0, 1, len(top_5_models)))
+
+    # Plotting the radar chart for each top 5 model
+    for i, model in enumerate(top_5_models.iterrows()):
+        values = model[1][categories].tolist()
+        values += values[:1]
+        ax.plot(angles, values, label=f"{model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
+        ax.fill(angles, values, alpha=0.1, color=colors[i])
+
+    ax.set_theta_offset(np.pi / 2)
+    ax.set_theta_direction(-1)
+    ax.set_rlabel_position(0)
+
+    # Setting axis labels and ticks
+    plt.xticks(angles[:-1], categories, fontsize=12, rotation=45)
+    ax.set_rlabel_position(45)
+    plt.yticks([1, 2, 3, 4, 5], ["1", "2", "3", "4", "5"], color="grey", size=10)
+    plt.ylim(1, 5)
+
+    # Adding chart title and legend
+    plt.title("Top 5 Open LLM \n created by Minwoo Park", fontsize=20)
+    plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
+
+    creation_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    plt.text(
+        0.99,
+        0.99,
+        f"Created at: {creation_time}\n github.com/dsdanielpark",
+        horizontalalignment="right",
+        verticalalignment="bottom",
+        transform=ax.transAxes,
+        fontsize=10,
+        color="gray",
+    )
+
+    # Adding descriptive text below the chart
+    plt.text(0.7, -0.1, "The minimum score of each category is scaled to 1, and the maximum score is scaled to 5. \n Parameters column indicates the percentage calculated by dividing the number of parameters for each model by the highest number of parameters.",
+             fontsize=10, ha='center', va='center', transform=plt.gca().transAxes)
+
+    plt.savefig(f"{save_path}/radial_chart.png", dpi=300, bbox_inches='tight')
+    plt.close()
