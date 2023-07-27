@@ -545,7 +545,7 @@ def vis_radial_chart(df: pd.DataFrame):
     plt.ylim(1, 5)
 
     # Adding chart title and legend
-    plt.title("Top 5 Open LLM \n created by Minwoo Park", fontsize=20)
+    plt.title("Top 5 Open LLM Radial Plot by Minwoo Park", fontsize=20)
     plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
 
     creation_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
