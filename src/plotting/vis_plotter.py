@@ -532,7 +532,8 @@ def vis_radial_chart(df: pd.DataFrame):
     for i, model in enumerate(top_5_models.iterrows()):
         values = model[1][categories].tolist()
         values += values[:1]
-        ax.plot(angles, values, label=f"{model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
+        rank_label = f"{i+1}st"
+        ax.plot(angles, values, label=f"{rank_label} - {model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
         ax.fill(angles, values, alpha=0.1, color=colors[i])
 
     ax.set_theta_offset(np.pi / 2)
@@ -543,16 +544,16 @@ def vis_radial_chart(df: pd.DataFrame):
     plt.xticks(angles[:-1], categories, fontsize=12, rotation=45)
     ax.set_rlabel_position(45)
     plt.yticks([1, 2, 3, 4, 5], ["1", "2", "3", "4", "5"], color="grey", size=10)
-    plt.ylim(1, 5)
+    plt.ylim(1, 5.3)
 
     # Adding chart title and legend
-    plt.title("Top 5 Open LLM Radial Plot by Minwoo Park", fontsize=20)
+    plt.title("Top 5 Open LLM Radial Plot", fontsize=20)
     plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
 
     creation_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     plt.text(
-        0.99,
-        0.99,
+        0.5,
+        0.5,
         f"Created at: {creation_time}\n github.com/dsdanielpark",
         horizontalalignment="right",
         verticalalignment="bottom",
@@ -562,7 +563,7 @@ def vis_radial_chart(df: pd.DataFrame):
     )
 
     # Adding descriptive text below the chart
-    plt.text(0.7, -0.1, "The minimum score of each category is scaled to 1, and the maximum score is scaled to 5. \n Parameters column indicates the percentage calculated by dividing the number of parameters for each model by the highest number of parameters.",
+    plt.text(0.7, -0.1, "The minimum score of each category is scaled to 1, and the maximum score is scaled to 5.",
              fontsize=10, ha='center', va='center', transform=plt.gca().transAxes)
 
     plt.savefig(f"{save_path}/radial_chart.png", dpi=300, bbox_inches='tight')
