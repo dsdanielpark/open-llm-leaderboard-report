@@ -565,7 +565,7 @@ def vis_radial_chart(df: pd.DataFrame):
     )
 
     # Adding descriptive text below the chart
-    plt.text(0.7, -0.1, "The minimum score of each category is scaled to 1, and the maximum score is scaled to 5. \n You can see more plots at https://github.com/dsdanielpark/open-llm-leaderboard-report",
+    plt.text(0.7, -0.1, "The minimum score of each category is scaled to 1, and the maximum score is scaled to 5. \n Parameters column indicates the percentage calculated by dividing the number of parameters for each model by the highest number of parameters.",
              fontsize=10, ha='center', va='center', transform=plt.gca().transAxes)
 
     plt.savefig(f"{save_path}/radial_chart.png", dpi=300, bbox_inches='tight')
