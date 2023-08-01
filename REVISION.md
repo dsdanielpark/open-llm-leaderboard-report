@@ -1,6 +1,27 @@
 # Open LLM Leaderboard Report Revision
 
 
+
+### 2023.08.01
+
+#### 1. Which one is better, finetuning with a sequence length of 1024 or 2048 in LLaMA1 and LLaMA2? And what are the reasons behind the choice?
+
+Korean company Upstage released models fine-tuned with llama2 using various datasets. They adjusted the sequence length differently compared to fine-tuning llama1, and the results for the next two models are interesting and intriguing.
+- [upstage/Llama-2-70b-instruct-1024](https://huggingface.co/upstage/Llama-2-70b-instruct)
+- [upstage/llama-30b-instruct-2048](https://huggingface.co/upstage/llama-30b-instruct-2048/discussions/7#64c871d8d11ed5b1e2e0a4c4)
+
+
+If anyone knows, please let me know on the following [discussion page](https://huggingface.co/upstage/llama-30b-instruct-2048/discussions/7#64c871d8d11ed5b1e2e0a4c4).
+
+#### 2. The trade-off of benchmarks.
+Based on the observation of the radial chart, the trade-off between benchmark scores appears to be influenced by various factors.The reason for this trade-off in datasets like truthful benchmarks and MMLU benchmarks, which might seem intuitive to have minimal trade-offs, is still unclear and requires further investigation.
+
+
+### 2023.07.28
+- This update is a commit for adding a radial chart of the top 5 open LLMs and is not included in the analysis.
+
+
+
 ### 2023.07.24
 
 #### 1. *Long Sequence Length is better* <br>
