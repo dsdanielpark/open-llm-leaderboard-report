@@ -532,8 +532,7 @@ def vis_radial_chart(df: pd.DataFrame):
     for i, model in enumerate(top_5_models.iterrows()):
         values = model[1][categories].tolist()
         values += values[:1]
-        rank_label = f"{i+1}st"
-        ax.plot(angles, values, label=f"{rank_label} - {model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
+        ax.plot(angles, values, label=f"{model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
         ax.fill(angles, values, alpha=0.1, color=colors[i])
 
     ax.set_theta_offset(np.pi / 2)
@@ -563,7 +562,7 @@ def vis_radial_chart(df: pd.DataFrame):
     )
 
     # Adding descriptive text below the chart
-    plt.text(0.7, -0.1, "The minimum score of each category is scaled to 1, and the maximum score is scaled to 5.",
+    plt.text(0.7, -0.1, "The minimum score of each category is scaled to 1, and the maximum score is scaled to 5. \n You can see more plots at https://github.com/dsdanielpark/open-llm-leaderboard-report",
              fontsize=10, ha='center', va='center', transform=plt.gca().transAxes)
 
     plt.savefig(f"{save_path}/radial_chart.png", dpi=300, bbox_inches='tight')
