@@ -532,7 +532,8 @@ def vis_radial_chart(df: pd.DataFrame):
     for i, model in enumerate(top_5_models.iterrows()):
         values = model[1][categories].tolist()
         values += values[:1]
-        ax.plot(angles, values, label=f"{model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
+        rank_label = f"{i+1}st"
+        ax.plot(angles, values, label=f"{rank_label} - {model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
         ax.fill(angles, values, alpha=0.1, color=colors[i])
 
     ax.set_theta_offset(np.pi / 2)
@@ -551,8 +552,8 @@ def vis_radial_chart(df: pd.DataFrame):
 
     creation_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     plt.text(
-        0.5,
-        0.5,
+        0.99,
+        0.99,
         f"Created at: {creation_time}\n github.com/dsdanielpark",
         horizontalalignment="right",
         verticalalignment="bottom",
