@@ -66,9 +66,11 @@ def vis_totalplot(df: pd.DataFrame, enhance_tick: bool = None) -> None:
         for tick in ax.get_xticklabels():
             label = tick.get_text()
             if re.search(r"(GPT|gpt)", label, flags=re.IGNORECASE):
-                tick.set_color("blue")
+                tick.set_color("green")
             if re.search(r"(stable|Stable)", label):
                 tick.set_color("red")
+            if re.search(r"(upstage|upstage)", label):
+                tick.set_color("purple")
 
     plt.xticks(rotation=45, ha="right", fontsize=20)
     plt.xlabel("Model", fontsize=24)
