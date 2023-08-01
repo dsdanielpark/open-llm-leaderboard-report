@@ -16,10 +16,12 @@ If anyone knows, please let me know on the following [discussion page](https://h
 #### 2. The trade-off of benchmarks.
 Based on the observation of the radial chart, the trade-off between benchmark scores appears to be influenced by various factors.The reason for this trade-off in datasets like truthful benchmarks and MMLU benchmarks, which might seem intuitive to have minimal trade-offs, is still unclear and requires further investigation.
 
+![](assets/20230801/radial_chart.png)
+![](assets/20230801/totlaplot.png)
 
 ### 2023.07.28
 - This update is a commit for adding a radial chart of the top 5 open LLMs and is not included in the analysis.
-
+- ![](assets/20230728/radial_chart.png)
 
 
 ### 2023.07.24
