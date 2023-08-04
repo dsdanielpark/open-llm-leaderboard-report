@@ -534,7 +534,14 @@ def vis_radial_chart(df: pd.DataFrame):
     for i, model in enumerate(top_5_models.iterrows()):
         values = model[1][categories].tolist()
         values += values[:1]
-        rank_label = f"{i+1}st"
+        if i == 0:
+            rank_label = f"{i+1}st"
+        elif i == 1:
+            rank_label = f"{i+1}nd"
+        elif i == 2:
+            rank_label = f"{i+1}rd"
+        else:
+            rank_label = f"{i+1}th" 
         ax.plot(angles, values, label=f"{rank_label} - {model[1]['Model']}", linestyle='--', color=colors[i], linewidth=2)
         ax.fill(angles, values, alpha=0.1, color=colors[i])
 
