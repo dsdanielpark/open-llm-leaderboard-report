@@ -1,4 +1,4 @@
-N_MODEL = 50
+N_MODEL = 40
 
 DATA_PATH = "data"
 STEPS = [
