@@ -1,6 +1,13 @@
 # Open LLM Leaderboard Report Revision
 
+### 2023.08.09
+- Upstage, a Korean team with exceptional members in the field of Kaggle and AI competitions, has achieved remarkable performance using 70B.
+- Particularly, a substantial improvement in the overall model can be observed in TruthfulQA, and for qCammel, it demonstrates high scores in MMLU or HellaSwag.
+- Overall, both Upstage and StabilityAI seem to employ similar experimental approaches and techniques, and regarding qCammel, further investigation might be necessary.
+- As for the project related to Orca, there is no further update or presence on the leaderboard, and it's unclear whether the project has transitioned to closed-source or what has transpired. If anyone has the latest information about Orca, please let me know via email or message.
 
+![](assets/20230809/radial_chart.png)
+![](assets/20230809/totalplot.png)
 
 ### 2023.08.01
 
@@ -12,6 +19,24 @@ Korean company Upstage released models fine-tuned with llama2 using various data
 
 
 If anyone knows, please let me know on the following [discussion page](https://huggingface.co/upstage/llama-30b-instruct-2048/discussions/7#64c871d8d11ed5b1e2e0a4c4).
+
+[Limerobot](https://huggingface.co/Limerobot)
+```
+As you may have experienced, I believe Instruction Tuning of LLM is a field of empirical experimentation.
+
+In the case of llama-30b, a higher score was achieved with more Orca style dataset and max_seq_len:2048.
+
+However, for llama-2-70b, in our setting, a smaller size dataset and max_seq_len:1024 scored better.
+In fact, it recorded the highest score on our internal leaderboard when only about 50k of a dataset other than Orca dataset was used.
+
+Llama-2-70b tended to overfit faster at max_seq_len:2048, so it performed worse than llama-2-70b-hf. However, we do not plan to do additional experiments to solve this. (Because there is not much benefit in terms of cost)
+In conclusion, in our setting, the performance of llama-2-70b was better at max_seq_len:1024, so we chose 1024.
+
+I hope my answer was sufficient for you.
+
+(For reference, according to each model's config.json, max_position_embeddings is 2048 for llma1 and 4096 for llama2.)
+```
+
 
 #### 2. The trade-off of benchmarks.
 Based on the observation of the radial chart, the trade-off between benchmark scores appears to be influenced by various factors.The reason for this trade-off in datasets like truthful benchmarks and MMLU benchmarks, which might seem intuitive to have minimal trade-offs, is still unclear and requires further investigation.
