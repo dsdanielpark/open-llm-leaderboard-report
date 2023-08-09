@@ -27,7 +27,7 @@ python main.py
 
 ##  Total Summary
 ![](assets/20230809/totalplot.png)
-Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation.
+- Parameters: The largest parameter model achieved so far has been converted to 100 for percentage representation. When there is no parameter information in model name, it is displayed as 0, making the graph appear to suddenly connect to 0.
 
 ## Average Ranking
 ![](assets/20230809/rankingplot_Average.png)
