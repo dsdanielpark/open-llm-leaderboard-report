@@ -1,5 +1,21 @@
 # Open LLM Leaderboard Report Revision
 
+### 2023.08.17
+- Instruction Tuning in LLM is an experimental field, and as seen in LLaMa2 Chat, the task of adjusting it to human preferences is also experimental and relies on human evaluation. Many studies are proceeding by selecting record scales (such as in the case of Meta's llama2 chat) and some reliable annotators (see Meta's Self-Alignment with Instruction Back-translation paper).
+
+- Additionally, recently, teams including Meta AI and Platypus have pointed out data contamination in prominent LLM evaluation metrics. Platypus has addressed this contamination, effectively performing QLORA, and claimed the top spot on the open leaderboard.
+
+- While further validation for additional data contamination is needed, this once again demonstrates that the metrics used in open LLM leaderboards can only be auxiliary, and it also points out data contamination in previously tuned LLMs (ranking may be adjusted).
+
+- Furthermore, as some experiments by the UpStage team show, llama1 and llama2 maintain almost the same architecture but have different tuning patterns depending on sequence length. I believe llama2 will become a new fine-tuning field.
+
+- Overall, the current trend is 1) a need for well-curated small datasets, 2) the ability to adjust them for domain-specific needs, and 3) CoT (Chain of Thought), which also requires well-curated small datasets, can derive abstract insights that allow reasoning in unadjusted domains. Some of these aspects have also been mentioned multiple times in papers.
+
+- Additionally, the Meta AI-llama2 team consistently advocates for well-curated, high-quality small datasets and mentions verifying this several times in their paper. Therefore, it seems that the attention to Falcon's large-scale partially curated datasets has diminished.
+
+![](assets/20230817/radial_chart.png)
+![](assets/20230817/totalplot.png)
+
 ### 2023.08.09
 - Upstage, a Korean team with exceptional members in the field of Kaggle and AI competitions, has achieved remarkable performance using 70B.
 - Particularly, a substantial improvement in the overall model can be observed in TruthfulQA, and for qCammel, it demonstrates high scores in MMLU or HellaSwag.
