@@ -1,8 +1,14 @@
 # Open LLM Leaderboard Report Revision
 
+### 2023.09.01
+
+![](assets/20230901/radial_chart.png)
+![](assets/20230901/totalplot.png)
+
 ### 2023.08.25
 
-
+![](assets/20230825/radial_chart.png)
+![](assets/20230825/totalplot.png)
 
 ### 2023.08.17
 - Instruction Tuning in LLM is an experimental field, and as seen in LLaMa2 Chat, the task of adjusting it to human preferences is also experimental and relies on human evaluation. Many studies are proceeding by selecting record scales (such as in the case of Meta's llama2 chat) and some reliable annotators (see Meta's Self-Alignment with Instruction Back-translation paper).
