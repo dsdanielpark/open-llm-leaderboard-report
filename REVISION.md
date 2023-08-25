@@ -1,7 +1,7 @@
 # Open LLM Leaderboard Report Revision
 
 ### 2023.09.01
-- Will be soon.
+- Comming soon.
 
 ![](assets/20230901/radial_chart.png)
 ![](assets/20230901/totalplot.png)
