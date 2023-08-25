@@ -1,12 +1,15 @@
 # Open LLM Leaderboard Report Revision
 
 ### 2023.09.01
+- Will be soon.
 
 ![](assets/20230901/radial_chart.png)
 ![](assets/20230901/totalplot.png)
 
 ### 2023.08.25
-
+- After the July release of Llama2, it's been about a month. While there have been improvements made swiftly, leveraging the knowledge from Llama1, it feels like we are once again facing the challenges of Llama2's SPF (Supervised Pinetuning). Researchers are actively moving to refocus on their strengths for their research.
+- Additionally, various expansion plugins are being reintroduced and are transitioning towards more polished solutions that can be commercialized. However, entering a stable business phase still seems challenging, and there is a need to explore ways to use LLM more intelligently.
+- Nevertheless, despite these challenges, the boundless potential of LLM continues to evolve, and recently, Code Llama using llama2 has also been unveiled.
 ![](assets/20230825/radial_chart.png)
 ![](assets/20230825/totalplot.png)
 
