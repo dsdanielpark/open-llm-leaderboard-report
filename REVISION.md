@@ -1,6 +1,21 @@
 # Open LLM Leaderboard Report Revision
 
+### 2023.09.15
+- Efforts are underway to significantly increase the number of parameters in models like FLM 101B and FALCON 180B, similar to OpenAI's GPT-4.
+- The development in the Open LLM community appears to be becoming increasingly closed-off, with a notable reduction in the sharing of datasets and code.
+- Apart from llm, progress in areas like RAG is prominent. There is active movement to integrate llm into both front-end and back-end architectures and create solutions.
+- Similar to the last update, most fine-tuning is being done on the 70b model, and discussions on multilingual llm are actively ongoing.
+- Scores are mostly stable with slight increases, but many recent papers are reporting data leakage or contamination in various evaluation metrics, not just the open llm leader board. New evaluation methods are expected to emerge soon.
+
+![](assets/20230904/radial_chart.png)
+![](assets/20230904/totalplot.png)
+
+
 ### 2023.09.04
+- Since the release of llama2, the competitive efforts to improve scores have largely disappeared, and we are witnessing a convergence in overall scores.
+- Overall, for llama2, it seems that we've reached the limits of fine-tuning the 70b model. While there is a slight increase, there is no significant change.
+- A noticeable trend is that there is increased interest in how to fine-tune using the 70b model with appropriate datasets, compared to the 7b or 13b models. More research is being conducted on the processes before and after llm, such as RAG or prompt engineering.
+- While specialized models are being trained for each domain, there is concern that they are becoming too siloed due to fine-tuning.
 
 
 ![](assets/20230904/radial_chart.png)
