@@ -1,5 +1,17 @@
 # Open LLM Leaderboard Report Revision
 
+
+### 2023.10.04
+- Updates to the open leaderboard still remain largely unchanged from before. Quantitative performance of the llama2 fine-tuning model has reached a certain limit, and qualitative specialized models are being developed.
+- Models with 180b or more parameters continue to be consistently released, and conversely, models with fewer than 13b parameters are also continually developed. I am currently working on integrating prominent datasets in the llm domain and efficiently selecting data, so I expect to publish results primarily focused on 13b models soon.
+- The popularity of 13b models is attributed to their noticeably better qualitative performance compared to 7b models, and they can run on single GPUs or more widely available resources, albeit with some difficulty.
+- Development for Korean llm is also advancing. [The Korean open llm leaderboard](https://www.aihub.or.kr/leaderboard/view.do?currMenu=500&topMenu=102) is almost identical to the open llm leaderboard but includes evaluations on Korean datasets.
+
+![](assets/20230904/radial_chart.png)
+![](assets/20230904/totalplot.png)
+
+
+
 ### 2023.09.15
 - Efforts are underway to significantly increase the number of parameters in models like FLM 101B and FALCON 180B, similar to OpenAI's GPT-4.
 - The development in the Open LLM community appears to be becoming increasingly closed-off, with a notable reduction in the sharing of datasets and code.
