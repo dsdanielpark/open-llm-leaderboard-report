@@ -15,8 +15,8 @@ You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leader
 ## Run
 Set using [`config.py`](https://github.com/dsdanielpark/open-llm-leaderboard-report/blob/main/config.py)
 ```
-git clone https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report
-cd Open-LLM-Leaderboard-Report
+git clone https://github.com/dsdanielpark/open_llm_leaderboard
+cd open_llm_leaderboard
 ```
 ```
 python main.py
