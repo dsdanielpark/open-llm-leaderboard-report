@@ -1,6 +1,12 @@
 # Open LLM Leaderboard Report Revision
 
 
+### 2023.10.13
+- GPT-4V has been released, but for multi-modal LLM (MLLM), GPT-4V is not yet unrivaled by other frontrunners. Many researchers are fighting RAG, clipping (control over outputs and inputs), and hallucination with MLLM, and small personalized models are emerging.
+- In particular, we are struggling with how to eliminate hallucinations in areas where hallucinations are lethal, and the problem of RLHF is constantly being raised, but there is no breakthrough solution to replace RLHF or RLAIF yet.
+- There is also an interesting paper on how generative AI can be utilized in this situation. 
+- Check out my LinkedIn posts from October 2023. https://www.linkedin.com/in/dsdanielpark/
+
 ### 2023.10.04
 - Updates to the open leaderboard still remain largely unchanged from before. Quantitative performance of the llama2 fine-tuning model has reached a certain limit, and qualitative specialized models are being developed.
 - Models with 180b or more parameters continue to be consistently released, and conversely, models with fewer than 13b parameters are also continually developed. I am currently working on integrating prominent datasets in the llm domain and efficiently selecting data, so I expect to publish results primarily focused on 13b models soon.
