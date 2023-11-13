@@ -10,8 +10,7 @@ Development Status :: 5 - Production/Stable <br>
 
 
 ## Updates will officially cease on November 13, 2023.
-As I have consistently raised before, due to pollution, it has become meaningless to observe the top-tier models, so we will stop updating the public archive. However, there may still be value for users who use the original leaderboard for its intended purpose, as it is possible to measure the performance of non-cheating models with free GPU instances. If the purpose is for quantitative comparison, it is clear that this leaderboard has lost its credibility. Please use a leaderboard that excludes inference results due to data contamination or one that has been reconstructed with a new test set. This GitHub will officially become a public archive on November 13, 2023. Thank you for your love and support.
-
+Updates to the public archive will be discontinued due to concerns about data integrity affecting the relevance of top model rankings. Users seeking to evaluate non-cheating models may still find the original leaderboard useful, particularly with the availability of free GPU instances. For those requiring quantitative comparisons, it might be prudent to consult a leaderboard that accounts for data contamination or utilizes a refreshed test set. The GitHub will transition to a public archive on November 13, 2023.
 
 <br><br> 
 
