@@ -2,9 +2,28 @@ Development Status :: 5 - Production/Stable <br>
 *Copyright (c) 2023 MinWoo Park*
 
 
+<br><br> 
+
+***
+
+<br><br> 
+
+
+## Updates will officially cease on November 13, 2023.
+As I have consistently raised before, due to pollution, it has become meaningless to observe the top-tier models, so we will stop updating the public archive. However, there may still be value for users who use the original leaderboard for its intended purpose, as it is possible to measure the performance of non-cheating models with free GPU instances. If the purpose is for quantitative comparison, it is clear that this leaderboard has lost its credibility. Please use a leaderboard that excludes inference results due to data contamination or one that has been reconstructed with a new test set. This GitHub will officially become a public archive on November 13, 2023. Thank you for your love and support.
+
+
+<br><br> 
+
+***
+
+<br><br> 
+
+
 # Open LLM Leaderboard Report
 #### Latest update: 20231031
-This repository offers visualizations that showcase the performance of open-source Large Language Models (LLMs), based on evaluation metrics sourced from Hugging Face's Open-LLM-Leaderboard. (Updated on a monthly basis starting from October 31, 2023)
+This repository offers visualizations that showcase the performance of open-source Large Language Models (LLMs), based on evaluation metrics sourced from Hugging Face's Open-LLM-Leaderboard. 
+
 
 ## Source data
 You can refer to this [CSV file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/assets/20231031/20231031.csv) for the underlying data used for visualization. Raw data is 2d-list formatted [JSON file](https://github.com/dsdanielpark/Open-LLM-Leaderboard-Report/blob/main/data/20231031.json). You can find all images and back data at [assets folder](https://github.com/dsdanielpark/open-llm-leaderboard-report/tree/main/assets).
