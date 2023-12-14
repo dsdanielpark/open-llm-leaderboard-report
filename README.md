@@ -10,7 +10,11 @@ Development Status :: 5 - Production/Stable <br>
 
 
 ## Updates will officially cease on November 13, 2023.
-Updates to the public archive will be discontinued due to concerns about data integrity affecting the relevance of top model rankings. Users seeking to evaluate non-cheating models may still find the original leaderboard useful, particularly with the availability of free GPU instances. For those requiring quantitative comparisons, it might be prudent to consult a leaderboard that accounts for data contamination or utilizes a refreshed test set. The GitHub will transition to a public archive on November 13, 2023.
+The updates for the Open LLM LeaderBoard Report(This Repository) will officially cease on November 13, 2023. Due to concerns of contamination and leaks in the test dataset, I have determined that the rankings on Hugging Face's Open LLM Leaderboard can no longer be fully trusted. Users referring to the Open LLM Leaderboard should now carefully assess not only the rankings of models but also whether models have artificially boosted benchmark scores using contaminated training data. Additionally, it is advisable to consider benchmark datasets tailored for different purposes and to conduct qualitative evaluations as well.
+
+Nevertheless, Hugging Face's Open LLM LeaderBoard, with its free GPU instances, can still provide a rough estimate of model performance for many users and serve as one aspect of quantitative validation. We appreciate Hugging Face for their contributions.
+
+Although updates will no longer be carried out, the code used to generate the corresponding plots remains valid, allowing you to configure and analyze the data as needed.
 
 <br><br> 
 
